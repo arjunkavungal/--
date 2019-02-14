@@ -5,3 +5,4 @@ p = np.array([1,2,3])
 q = np.array([4,5,6])
 plt.plot(p,q)
 plt.show()
+print("You should be coded out, Anu");

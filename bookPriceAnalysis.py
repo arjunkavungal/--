@@ -20,7 +20,9 @@ site = "https://api.binance.com/api/v3/exchangeInfo?symbol=BNBBTC"
 print(requests.get("https://www.googleapis.com/books/v1/volumes?key=AIzaSyCYKIKheo-kxVkwr8Aq3468SbhIfXm_-C4&q=search+terms"))
 if submit:
     response = requests.get("https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCYKIKheo-kxVkwr8Aq3468SbhIfXm_-C4&country=US")
-    st.write(response.json())
+    response_json = response.json()
+    df = pd.DataFrame.from_dict(reponse_json)
+    st.write(df)
 '''
 if submit:
     import urllib.request, json 

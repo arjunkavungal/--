@@ -20,7 +20,7 @@ def prices(dictionary):
             retailPrice = saleinfo['retailPrice']
             listPrices.append(listPrice['amount'])
             retailPrices.append(retailPrice['amount'])
-            st.write(listPrices)
+        st.write(listPrices)
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

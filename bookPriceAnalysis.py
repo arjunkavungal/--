@@ -26,7 +26,7 @@ if submit:
     response_json = response.json()
     #df = pd.DataFrame.from_dict(reponse_json)
     items = response_json['items']
-    prices(items)
+    st.write(response_json)
 '''
 if submit:
     import urllib.request, json 

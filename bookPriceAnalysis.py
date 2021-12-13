@@ -17,7 +17,7 @@ def prices(dictionary):
         if (saleinfo['saleability'] == "FOR_SALE"):
             listPrice = saleinfo['listPrice']
             retailPrice = saleinfo['retailPrice']
-            df.append({'listPrice':[listPrice],'retailPrice':[retailPrice]},ignore_index=True)
+            df.append(pd.DataFrame({'listPrice':[listPrice],'retailPrice':[retailPrice]}),ignore_index=True)
             st.write(df)
 form = st.form(key='my_form')
 text_input = label='Enter some text'

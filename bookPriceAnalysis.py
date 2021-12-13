@@ -22,7 +22,7 @@ if submit:
     response = requests.get("https://www.googleapis.com/books/v1/volumes?q=" + text_input.replace(" ","+")+ "&key=AIzaSyCYKIKheo-kxVkwr8Aq3468SbhIfXm_-C4&country=US")
     response_json = response.json()
     #df = pd.DataFrame.from_dict(reponse_json)
-    st.write(response_json)
+    st.write(response_json['items'])
 '''
 if submit:
     import urllib.request, json 

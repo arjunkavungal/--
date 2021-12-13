@@ -9,7 +9,7 @@ import pickle
 import csv
 import pandas as pd
 from urllib.request import urlopen
-import sklearn
+from sklearn.tree import DecisionTreeRegressor
 import requests
 def foo_bar(x):
     return x['buyLink']
@@ -31,6 +31,8 @@ def prices(dictionary):
 
     st.write(listPrices)
     st.line_chart(df)
+    regr = DecisionTreeRegressor()
+    regr.fit(df[['listPrice']], df['retailPrice'])
     df.to_csv("results.csv")
     #with open('finalized_model.pkl', 'rb') as f:
         #users = pickle.load(f)

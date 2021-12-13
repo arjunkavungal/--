@@ -12,7 +12,7 @@ def foo_bar(x):
     return x['buyLink']
 def prices(dictionary):
     for i in dictionary:
-        st.write(i)
+        st.write(i['saleInfo'])
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

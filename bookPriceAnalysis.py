@@ -9,6 +9,7 @@ import pickle
 import csv
 import pandas as pd
 from urllib.request import urlopen
+from sklearn.linear_model import LogisticRegression
 import requests
 def foo_bar(x):
     return x['buyLink']
@@ -31,8 +32,8 @@ def prices(dictionary):
     st.write(listPrices)
     st.line_chart(df)
     df.to_csv("results.csv")
-    with open('finalized_model.pkl', 'rb') as f:
-        users = pickle.load(f)
+    #with open('finalized_model.pkl', 'rb') as f:
+        #users = pickle.load(f)
     #classifier = pickle.load(pickle_in)
     #classifier.predict([[10]])
 form = st.form(key='my_form')

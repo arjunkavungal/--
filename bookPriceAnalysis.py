@@ -16,6 +16,7 @@ form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 site = "https://api.github.com"
+print(urlopen(site))
 if submit:
     print(urlopen(site))
 '''

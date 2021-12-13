@@ -16,9 +16,8 @@ form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+"))
-url = "https://api.github.com"
-response = urlopen(url)
-print(url)
+if submit:
+    print(urlopen(site))
 '''
 if submit:
     import urllib.request, json 

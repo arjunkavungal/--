@@ -21,7 +21,7 @@ def prices(dictionary):
             listPrices.append(listPrice['amount'])
             retailPrices.append(retailPrice['amount'])
     df = pd.DataFrame({"list price":listPrices,"retail price":retailPrices})
-    st.write(df)
+    st.line_chart(df)
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

@@ -15,7 +15,7 @@ form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+"))
-url = requests.get("https://jsonplaceholder.typicode.com/users")
+url = requests.get("https://api.binance.com/api/v3/exchangeInfo?symbol=BNBBTC")
 print(url)
 '''
 if submit:

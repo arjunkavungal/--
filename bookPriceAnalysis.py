@@ -15,6 +15,9 @@ form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+"))
+url = requests.get("https://jsonplaceholder.typicode.com/users")
+print(url)
+'''
 if submit:
     import urllib.request, json 
     with urllib.request.urlopen("https://www.googleapis.com/books/v1/volumes?q=kappa") as url:
@@ -40,3 +43,4 @@ if submit:
         df['listPrice'] = pd.Series(lp)
         df['retailPrice'] = pd.Series(rp)
         st.line_chart(df[['listPrice','retailPrice']])
+'''

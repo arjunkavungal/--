@@ -32,8 +32,9 @@ def prices(dictionary):
     st.line_chart(df)
     df.to_csv("results.csv")
     pickle_in = open('finalized_model.pkl', 'rb') 
-    classifier = pickle.load(pickle_in)
-    classifier.predict([[10]])
+    st.write(pickle_in)
+    #classifier = pickle.load(pickle_in)
+    #classifier.predict([[10]])
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

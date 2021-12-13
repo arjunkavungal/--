@@ -16,10 +16,10 @@ submit_button = form.form_submit_button(label='Submit')
 form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
-site = "https://www.googleapis.com/books/v1/volumes"
+site = "https://api.binance.com/api/v3/exchangeInfo?symbol=BNBBTC"
 print(requests.get("https://www.googleapis.com/books/v1/volumes?key=AIzaSyCYKIKheo-kxVkwr8Aq3468SbhIfXm_-C4&q=search+terms"))
 if submit:
-    response = requests.get("https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+")))
+    response = requests.get("https://www.googleapis.com/books/v1/volumes?key=AIzaSyCYKIKheo-kxVkwr8Aq3468SbhIfXm_-C4&q=search+terms")
     st.write(response.json())
 '''
 if submit:

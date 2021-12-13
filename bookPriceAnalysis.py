@@ -14,7 +14,8 @@ def prices(dictionary):
     for i in dictionary:
         saleinfo = i['saleInfo']
         if (saleinfo['saleability'] == "FOR_SALE"):
-            st.write(saleinfo)
+            listPrice = saleinfo['listPrice']
+            retailPrice = saleinfo['retailPrice']
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

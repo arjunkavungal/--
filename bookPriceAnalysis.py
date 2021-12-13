@@ -10,6 +10,9 @@ from urllib.request import urlopen
 import requests
 def foo_bar(x):
     return x['buyLink']
+def prices(dictionary):
+    for i in dictionary:
+        pass
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')
@@ -23,7 +26,7 @@ if submit:
     response_json = response.json()
     #df = pd.DataFrame.from_dict(reponse_json)
     items = response_json['items']
-    st.write(pd.read_json(response_json))
+    st.write(items)
 '''
 if submit:
     import urllib.request, json 

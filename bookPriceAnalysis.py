@@ -5,6 +5,7 @@ Spyder Editor
 This is a temporary script file.
 """
 import streamlit as st
+import csv
 import pandas as pd
 from urllib.request import urlopen
 import requests
@@ -21,6 +22,11 @@ def prices(dictionary):
             listPrices.append(listPrice['amount'])
             retailPrices.append(retailPrice['amount'])
     df = pd.DataFrame({"list price":listPrices,"retail price":retailPrices})
+    with open('results.csv', 'w') as f:
+        writer = csv.writer(f)
+
+        writer.writerow(row)
+
     st.write(listPrices)
     st.line_chart(df)
     df.to_csv("results.csv")

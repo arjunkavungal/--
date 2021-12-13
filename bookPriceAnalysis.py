@@ -9,7 +9,7 @@ import pickle
 import csv
 import pandas as pd
 from urllib.request import urlopen
-import tensorflow as tf
+import torch 
 import requests
 def foo_bar(x):
     return x['buyLink']

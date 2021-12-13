@@ -17,7 +17,7 @@ form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes"
-print(requests.get("https://www.googleapis.com/books/v1/volumes?q=tridelt"))
+print(requests.get("https://www.googleapis.com/books/v1/volumes?q=search+terms"))
 if submit:
     response = requests.get("https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+")))
     st.write(response.json())

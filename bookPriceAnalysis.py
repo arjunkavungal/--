@@ -8,17 +8,19 @@ import streamlit as st
 import pandas as pd
 from urllib.request import urlopen
 import requests
-df = pd.DataFrame(data={'listPrice':[],'retailPrice':[]})
 def foo_bar(x):
     return x['buyLink']
 def prices(dictionary):
+    listPrices = []
+    retailPrices = []
     for i in dictionary:
         saleinfo = i['saleInfo']
         if (saleinfo['saleability'] == "FOR_SALE"):
             listPrice = saleinfo['listPrice']
             retailPrice = saleinfo['retailPrice']
-            df.append(pd.DataFrame({'listPrice':[listPrice],'retailPrice':[retailPrice]}),ignore_index=True)
-            st.write(pd.DataFrame({'listPrice':[listPrice['amount']],'retailPrice':[retailPrice['amount']]}))
+            listPrices.append(listPrice['amount'])
+            retailPrices.append(retailPrice['amount'])
+            st.write(listPrices)
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

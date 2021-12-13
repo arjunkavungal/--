@@ -31,6 +31,7 @@ def prices(dictionary):
     st.write(listPrices)
     st.line_chart(df)
     df.to_csv("results.csv")
+    pickle_in = open('finalized_model.sav', 'rb') 
     classifier = pickle.load(pickle_in)
     classifier.predict([[10]])
 form = st.form(key='my_form')

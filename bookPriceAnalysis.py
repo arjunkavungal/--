@@ -18,7 +18,7 @@ submit = form.form_submit_button('Submit')
 site = "https://api.github.com"
 print(urlopen(site))
 if submit:
-    print(urlopen(site))
+    st.write(urlopen(site))
 '''
 if submit:
     import urllib.request, json 

@@ -21,9 +21,6 @@ def prices(dictionary):
             listPrices.append(listPrice['amount'])
             retailPrices.append(retailPrice['amount'])
     df = pd.DataFrame({"list price":listPrices,"retail price":retailPrices})
-    regr = DecisionTreeRegressor()
-    regr.fit(df[['list price']], df['retail price'])
-    st.write(regr.predict([10]))
     st.line_chart(df)
 form = st.form(key='my_form')
 text_input = label='Enter some text'

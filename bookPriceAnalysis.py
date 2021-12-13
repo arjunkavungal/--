@@ -19,7 +19,7 @@ submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes"
 print(requests.get("https://www.googleapis.com/books/v1/volumes?q=tridelt"))
 if submit:
-    st.write(requests.get("https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+")))
+    st.write(requests.get("https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+"))))
 '''
 if submit:
     import urllib.request, json 

@@ -17,7 +17,7 @@ submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+"))
 if submit:
     import urllib.request, json 
-    with urllib.request.urlopen(site) as url:
+    with urllib.request.urlopen("https://www.googleapis.com/books/v1/volumes?q=kappa") as url:
         data = json.loads(url.read().decode())
         df = pd.DataFrame.from_dict(pd.DataFrame.from_dict(data['items']))
         df = df[['saleInfo']]

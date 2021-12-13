@@ -6,6 +6,7 @@ This is a temporary script file.
 """
 import streamlit as st
 import pandas as pd
+from urllib.request import urlopen
 def foo_bar(x):
     return x['buyLink']
 form = st.form(key='my_form')
@@ -15,7 +16,8 @@ form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes?q="+str(text_input.replace(" ","+"))
-url = requests.get("https://api.binance.com/api/v3/exchangeInfo?symbol=BNBBTC")
+url = "https://api.github.com"
+response = urlopen(url)
 print(url)
 '''
 if submit:

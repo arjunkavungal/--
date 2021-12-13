@@ -23,6 +23,7 @@ def prices(dictionary):
     df = pd.DataFrame({"list price":listPrices,"retail price":retailPrices})
     st.write(listPrices)
     st.line_chart(df)
+    df.to_csv("results.csv")
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

@@ -25,7 +25,7 @@ def prices(dictionary):
     with open('results.csv', 'w') as f:
         writer = csv.writer(f)
 
-        writer.writerow(row)
+        writer.writerow(df)
 
     st.write(listPrices)
     st.line_chart(df)

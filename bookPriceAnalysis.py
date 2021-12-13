@@ -32,7 +32,7 @@ def prices(dictionary):
     st.write(listPrices)
     st.line_chart(df)
     regr = DecisionTreeRegressor()
-    regr.fit(df[['listPrice']], df['retailPrice'])
+    regr.fit(df[['list price']], df['retail price'])
     df.to_csv("results.csv")
     #with open('finalized_model.pkl', 'rb') as f:
         #users = pickle.load(f)

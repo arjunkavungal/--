@@ -4,7 +4,7 @@ Spyder Editor
 
 This is a temporary script file.
 """
-from sklearn.ensemble import RandomForestClassifier
+
 import pandas as pd
 from urllib.request import urlopen
 import requests

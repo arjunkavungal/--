@@ -7,6 +7,7 @@ This is a temporary script file.
 import streamlit as st
 import pandas as pd
 from urllib.request import urlopen
+import requests
 def foo_bar(x):
     return x['buyLink']
 form = st.form(key='my_form')
@@ -16,7 +17,7 @@ form = st.form(key='my-form')
 text_input = form.text_input('Enter your name')
 submit = form.form_submit_button('Submit')
 site = "https://www.googleapis.com/books/v1/volumes"
-print(urlopen("https://www.googleapis.com/books/v1/volumes?q=tridelt"))
+print(requests.get("https://www.googleapis.com/books/v1/volumes?q=tridelt"))
 if submit:
     st.write(urlopen(site))
 '''

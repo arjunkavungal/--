@@ -13,7 +13,8 @@ def foo_bar(x):
 def prices(dictionary):
     for i in dictionary:
         saleinfo = i['saleInfo']
-        st.write(saleinfo['saleability'])
+        if (saleinfo['saleability'] == "FREE"):
+            st.write(saleinfo)
 form = st.form(key='my_form')
 text_input = label='Enter some text'
 submit_button = form.form_submit_button(label='Submit')

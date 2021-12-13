@@ -9,7 +9,7 @@ import pickle
 import csv
 import pandas as pd
 from urllib.request import urlopen
-from sklearn.linear_model import LogisticRegression
+import scikit_learn
 import requests
 def foo_bar(x):
     return x['buyLink']

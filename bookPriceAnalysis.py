@@ -9,7 +9,7 @@ import pickle
 import csv
 import pandas as pd
 from urllib.request import urlopen
-import torch 
+import sklearn
 import requests
 def foo_bar(x):
     return x['buyLink']

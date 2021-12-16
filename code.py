@@ -1,3 +1,3 @@
 import streamlit as st
-from sympy import *
+import sympy
 st.write(sympy.diff(2*x**2, x))

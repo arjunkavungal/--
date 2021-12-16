@@ -1,4 +1,4 @@
 import streamlit as st
-import sympy
-x, y, z = sympy.symbols('x y z')
-st.write(sympy.diff(2*x**2, x))
+from sympy import *
+x, y, z = symbols('x y z')
+st.write(diff(2*x**2, x))
